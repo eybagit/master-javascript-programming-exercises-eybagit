@@ -4,4 +4,10 @@ function addFullNameProperty(obj) {
   return obj
 }
 
-console.log(addFullNameProperty({ firstName: "Cielo", lastName: "Azul" }))
+persona = {
+  firstName: 'Carla',
+  lastName: 'Amarela'
+}
+
+console.log(addFullNameProperty(persona));
+//console.log(addFullNameProperty({ firstName: "Cielo", lastName: "Azul" }))
