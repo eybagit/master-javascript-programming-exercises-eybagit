@@ -1,7 +1,6 @@
-function addToFrontOfNew(arr, element) {
-    // your code here
+const addToFrontOfNew = (arreglo, element) => [element, ...arreglo];
     
-}
+
 
 let input = [1, 2];
 let output = addToFrontOfNew(input, 3);
