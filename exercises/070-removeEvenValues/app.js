@@ -1,7 +1,13 @@
+
 function removeEvenValues(obj) {
-    // your code here
-    
+  Object.keys(obj).forEach(key => {
+    if (typeof obj[key] === 'number' && obj[key] % 2 === 0) {
+      delete obj[key];
+    }
+  });
+  return obj;
 }
+
 
 let obj = {
   a: 2,

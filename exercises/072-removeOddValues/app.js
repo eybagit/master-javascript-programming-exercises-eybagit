@@ -1,6 +1,9 @@
 function removeOddValues(obj) {
-    // your code here
-
+  Object.keys(obj).forEach(key => {
+    if (typeof obj[key] === 'number' && Math.abs(obj[key] % 2) === 1) {
+      delete obj[key];
+    }
+  });
 }
 
 let obj = {
