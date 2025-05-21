@@ -1,7 +1,4 @@
-function or(expression1, expression2) {
-  // your code here
-  
-}
+const or = (a, b) => a || b;
 
-let output = or(true, false);
+let output = or(false, false);
 console.log(output); // --> true;

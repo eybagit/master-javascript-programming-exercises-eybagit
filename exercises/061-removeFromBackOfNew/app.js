@@ -1,7 +1,4 @@
-function removeFromBackOfNew(arr) {
-  // your code here
-  
-}
+const removeFromBackOfNew = (arreglo) => arreglo.slice(0, arreglo.length -1)
 
 let arr = [1, 2, 3];
 let output = removeFromBackOfNew(arr);

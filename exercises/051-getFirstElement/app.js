@@ -1,7 +1,5 @@
-function getFirstElement(array) {
-  // Add your code after this line
 
-}
 
-let output = getFirstElement([1, 2, 3, 4, 5]);
-console.log(output); // --> 1
+const getFirstElement = (caja, posicion) => caja?.at(posicion) ?? undefined;
+console.log(getFirstElement([1, 2, 5], 0));
+

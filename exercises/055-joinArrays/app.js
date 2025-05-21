@@ -1,7 +1,6 @@
-function joinArrays(arr1, arr2) {
-  // your code here
+function joinArrays(arreglo1, arreglo2) {
+return arreglo1.concat(arreglo2);
   
 }
 
-let output = joinArrays([1, 2], [3, 4]);
-console.log(output); // --> [1, 2, 3, 4]
+console.log(joinArrays([1, 2], [-1, -2]));

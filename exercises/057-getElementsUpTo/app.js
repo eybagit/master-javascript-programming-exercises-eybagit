@@ -1,5 +1,5 @@
-function getElementsUpTo(array, n) {
-  // your code here
+const getElementsUpTo = (arreglo, indice) => {
+  return arreglo.slice(0, indice)
   
 }
 

@@ -1,6 +1,6 @@
-function getAllLetters(str) {
-    // your code here
-    
+
+function getAllLetters(palabra){ 
+  return [...palabra];
 }
 
 let output = getAllLetters('Radagast');
