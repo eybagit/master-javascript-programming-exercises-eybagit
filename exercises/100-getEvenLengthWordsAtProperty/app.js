@@ -1,10 +1,9 @@
-function getEvenLengthWordsAtProperty(obj, key) {
-    // your code here
-    
-}
+const getEvenLengthWordsAtProperty = (objeto, llave) => !objeto.hasOwnProperty(llave) || !Array.isArray(objeto[llave]) ? [] 
+: objeto[llave].filter((elemento) => elemento.length % 2 === 0 );
 
-let obj = {
+
+let objetillo = {
   key: ['a', 'long', 'game']
 };
-let output = getEvenLengthWordsAtProperty(obj, 'key');
+let output = getEvenLengthWordsAtProperty(objetillo, 'key');
 console.log(output); // --> ['long', 'game']
