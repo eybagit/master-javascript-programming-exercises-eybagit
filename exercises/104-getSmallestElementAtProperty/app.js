@@ -1,10 +1,11 @@
-function getSmallestElementAtProperty(obj, key) {
-    // your code here
-  
-}
 
-let obj = {
-  key: [2, 1, 5]
+const getSmallestElementAtProperty = (objeto, llave) => !objeto.hasOwnProperty(llave) || !Array.isArray(objeto[llave]) || objeto[llave].length === 0 ? []
+    : Math.min(...objeto[llave])
+
+
+let objeto1 = {
+  llave1: [2, 1, 5]
 };
-let output = getSmallestElementAtProperty(obj, 'key');
-console.log(output); // --> 1
+
+console.log(getSmallestElementAtProperty(objeto1, 'llave1'));
+

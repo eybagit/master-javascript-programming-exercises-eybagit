@@ -1,10 +1,10 @@
-function getLargestElementAtProperty(obj, key) {
-    // your code here
-    
-}
+const getLargestElementAtProperty = (objeto, llave) => !objeto.hasOwnProperty(llave) || !Array.isArray(objeto[llave]) || objeto[llave].length === 0 ? []
+    : Math.max(...objeto[llave])
 
-let obj = {
-  key: [1, 2, 4]
+
+let objeto1 = {
+  llave1: [1, 2, 4]
 };
-let output = getLargestElementAtProperty(obj, 'key');
-console.log(output); // --> 4
+
+let salida = getLargestElementAtProperty(objeto1, 'llave1');
+console.log(salida);
