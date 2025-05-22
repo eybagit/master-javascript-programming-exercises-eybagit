@@ -1,7 +1,5 @@
-function joinArrayOfArrays(arr) {
-  // your code here
-  
-}
+const joinArrayOfArrays = (matriz) => matriz?.flat() 
+?? [];
 
 let output = joinArrayOfArrays([
   [1, 4],
