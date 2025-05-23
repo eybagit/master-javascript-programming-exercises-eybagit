@@ -17,9 +17,26 @@ let currentInventory = [
   },
 ];
 
-function renderAverageCostPerDesigner(inventory) {
-    // your code here
-  
+function renderAverageCostPerDesigner(inventarioActual) {
+  let promediosPorDiseniador = [];
+
+  for (let diseniador of inventarioActual) {
+    let sumaPrecios = 0;
+    let cantidadZapatos = diseniador.shoes.length;
+
+    for (let zapato of diseniador.shoes) {
+      sumaPrecios += zapato.price;
+    }
+
+    let precioPromedio = sumaPrecios / cantidadZapatos;
+
+    promediosPorDiseniador.push({
+      name: diseniador.name,
+      averagePrice: precioPromedio
+    });
+  }
+
+  return promediosPorDiseniador;
 }
 
 console.log(renderAverageCostPerDesigner(currentInventory));

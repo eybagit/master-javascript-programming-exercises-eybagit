@@ -1,36 +1,33 @@
-function PhoneNumberFormatter(numbers) {
-  this.numbers = numbers;
+function PhoneNumberFormatter(numeros) {
+  this.numeros = numeros;
 }
 
 PhoneNumberFormatter.prototype.render = function() {
-  let string = '';
-  // your code here
-  
-  return string;
+  const codigoArea = this.parenthesize(this.getAreaCode());
+  const codigoCentral = this.getExchangeCode();
+  const numeroLinea = this.getLineNumber();
+  return `${codigoArea} ${codigoCentral}-${numeroLinea}`;
 };
 
 PhoneNumberFormatter.prototype.getAreaCode = function() {
-  // your code here
-  
+  return this.slice(0, 3);
 };
 
 PhoneNumberFormatter.prototype.getExchangeCode = function() {
-  // your code here
-  
+  return this.slice(3, 6);
 };
 
 PhoneNumberFormatter.prototype.getLineNumber = function() {
-  // your code here
-  
+  return this.slice(6, 10);
 };
 
-PhoneNumberFormatter.prototype.parenthesize = function(string) {
-  return '(' + string + ')';
+PhoneNumberFormatter.prototype.parenthesize = function(texto) {
+  return '(' + texto + ')';
 };
 
-PhoneNumberFormatter.prototype.slice = function(start, end) {
-  return this.numbers.slice(start, end).join('');
+PhoneNumberFormatter.prototype.slice = function(inicio, fin) {
+  return this.numeros.slice(inicio, fin).join('');
 };
 
-let number = new PhoneNumberFormatter([6,5,0,8,3,5,9,1,7,2]);
-console.log(number.render()); // --> "(650) 835-9172"
+const telefono = new PhoneNumberFormatter([6,5,0,8,3,5,9,1,7,2]);
+console.log(telefono.render()); // --> "(650) 835-9172"

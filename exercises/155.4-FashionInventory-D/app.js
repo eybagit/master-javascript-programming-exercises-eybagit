@@ -17,9 +17,32 @@ let currentInventory = [
   }
 ];
 
-function getLaceNameDataForShoes(inventory) {
-    // your code here
-    
+function getLaceNameDataForShoes(inventario) {
+  let zapatosConLace = [];
+
+  for (let diseniador of inventario) {
+    for (let zapato of diseniador.shoes) {
+      let palabras = zapato.name.split(' ');
+      let indicePalabra = -1;
+      
+      // Buscamos palabras que contengan 'lace' o 'laced'
+      for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i].includes('lace') || palabras[i].includes('laced')) {
+          indicePalabra = i;
+          break;
+        }
+      }
+
+      if (indicePalabra !== -1) {
+        zapatosConLace.push({
+          nameWords: palabras,
+          targetWordIndex: indicePalabra
+        });
+      }
+    }
+  }
+
+  return zapatosConLace;
 }
 
 console.log(getLaceNameDataForShoes(currentInventory));

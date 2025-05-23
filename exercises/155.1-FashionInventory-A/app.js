@@ -17,11 +17,16 @@ let currentInventory = [
   }
 ];
 
-function renderInventory(inventory) {
-    // your code here
-    // hint: before you just dive into coding...
-    // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
+function renderInventory(inventarioActual) {
+  let listaZapatos = [];
+
+  for (let diseniador of inventarioActual) {
+    for (let zapato of diseniador.shoes) {
+      listaZapatos.push([diseniador.name, zapato.name, zapato.price]);
+    }
+  }
+
+  return listaZapatos;
 }
 
 console.log(renderInventory(currentInventory))
