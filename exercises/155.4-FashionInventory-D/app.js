@@ -46,3 +46,5 @@ function getLaceNameDataForShoes(inventario) {
 }
 
 console.log(getLaceNameDataForShoes(currentInventory));
+
+//Realizados
