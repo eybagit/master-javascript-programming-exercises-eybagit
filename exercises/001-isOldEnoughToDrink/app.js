@@ -6,3 +6,5 @@ function isOldEnoughToDrink(age) {
      
 }  
 console.log(isOldEnoughToDrink(20));
+
+//PrimerEjercicio
